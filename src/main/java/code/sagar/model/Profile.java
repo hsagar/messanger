@@ -2,9 +2,12 @@ package code.sagar.model;
 
 import java.util.Date;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
 /**
  * @author Sagar
  */
+@XmlRootElement
 public class Profile {
     private long id;
     private String profileName;
@@ -13,6 +16,7 @@ public class Profile {
     private Date created;
 
     public Profile() {
+
     }
 
     public Profile(long id, String profileName, String firstName, String lastName) {
@@ -20,7 +24,6 @@ public class Profile {
         this.profileName = profileName;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.created = new Date();
     }
 
     public long getId() {
